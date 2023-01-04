@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'binner-ef';
+    src: url('../fonts/binneref-webfont.woff2') format('woff2'),
+        url('../fonts/binneref-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ltc_jenson_w00regular';
+    src: url('ltc-jenson-w00-webfont.woff2') format('woff2'),
+        url('ltc-jenson-w00-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -13,6 +31,9 @@
     --grid-en-kleur-tekst-kleur: #b84b4b;
     --grid-en-kleur-button-kleur: #544389;
     --grid-en-kleur-accent-kleur: #f5922c;
+    --grid-en-kleur-tekst: 'pt-serif-pro',
+        sans-serif;
+    --grid-en-kleur-bodytekst: 'articulat-cf', sans-serif;
 
     /* Typografie */
     --typografie-bg-kleur1: #705435;
@@ -23,7 +44,7 @@
 
 
 body {
-    background-color: rgb(230, 248, 255);
+    background-color: rgb(255, 255, 255);
     background-image: url(../images/illustrations/bulletpoint-bg.svg);
     background-repeat: repeat;
     display: grid;
@@ -41,8 +62,8 @@ header {
 }
 
 h1 {
-    font-family: pedestria-mvb,
-        sans-serif;
+    font-family: 'pedestria-mvb', sans-serif;
+    ;
     font-weight: 700;
     font-size: 3em;
     text-align: center;
@@ -105,6 +126,13 @@ p {
 /* MAIN */
 /********/
 
+/* Grid en kleur */
+section:first-of-type {
+    background-color: var(--grid-en-kleur-achtergrond);
+    background-image: url(../images/lantern-pattern.svg);
+    position: relative;
+}
+
 
 section:first-of-type h1 {
 
@@ -112,11 +140,6 @@ section:first-of-type h1 {
     color: white;
 }
 
-section:first-of-type {
-    background-color: var(--grid-en-kleur-achtergrond);
-    background-image: url(../images/lantern-pattern.svg);
-    position: relative;
-}
 
 section:first-of-type>article {
     margin: 1em;
@@ -128,12 +151,24 @@ section:first-of-type>article {
 section:first-of-type h2,
 h3 {
     color: var(--grid-en-kleur-tekst-kleur);
+    font-family: var(--grid-en-kleur-tekst);
+    font-weight: 700;
+}
+
+section:first-of-type h2 {
+    font-size: 4em;
+}
+
+section:first-of-type p {
+    font-family: var(--grid-en-kleur-bodytekst);
+    line-height: 1.9;
+    padding: .5em;
 }
 
 section:first-of-type .grid-en-kleur-info {
     background-color: white;
-    padding: 3em;
-    border-radius: .5em;
+    padding: 2em;
+    border-radius: 1em;
 }
 
 section:first-of-type figure {
@@ -153,8 +188,21 @@ section:first-of-type figure img {
 /*************/
 /* SECTION 2 */
 /*************/
+/* Typografie */
 section:nth-of-type(2) {
+    display: grid;
+    gap: 3em;
+    position: relative;
     background-color: var(--typografie-bg-kleur2);
+}
+
+section:nth-of-type(2)>h2 {
+    position: absolute;
+    right: 1em;
+    color: var(--typografie-bg-kleur3);
+    top: 3em;
+    font-family: 'binner-ef';
+    font-size: 7em;
 }
 
 section:nth-of-type(2) h1 {
@@ -162,17 +210,24 @@ section:nth-of-type(2) h1 {
     color: var(--typografie-bg-kleur4);
 }
 
+section:nth-of-type(2) p {
+    font-family: "LTCJensonW00-Regular";
+}
 
 section:nth-of-type(2) article:nth-of-type(1) {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
+
 }
 
 section:nth-of-type(2) article:nth-of-type(1) h2 {
-    font-size: 2em;
-    grid-column-start: 1;
-    grid-column-end: -1;
+    font-size: 4.5em;
+    /* grid-column-start: 1;
+    grid-column-end: -1; */
+    position: absolute;
+    left: 2em;
+    writing-mode: vertical-rl;
 }
 
 section:nth-of-type(2) article:nth-of-type(1) img {
@@ -193,9 +248,10 @@ section:nth-of-type(2) article:nth-of-type(2) {
 }
 
 section:nth-of-type(2) article:nth-of-type(2) h2 {
+    font-family: 'binner-ef';
     font-size: 2em;
-    grid-column-start: 1;
-    grid-column-end: -1;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
 section:nth-of-type(2) article:nth-of-type(2) img {
@@ -205,7 +261,7 @@ section:nth-of-type(2) article:nth-of-type(2) img {
 }
 
 section:nth-of-type(2) article:nth-of-type(2) p {
-    place-self: center;
+
     padding: 3em;
 }
 
@@ -256,4 +312,15 @@ section:nth-of-type(4) article:nth-of-type(1) figure {
 
 section:nth-of-type(4) article:nth-of-type(1) figure img {
     width: 30%;
+}
+
+
+
+@media (min-width:100em) {
+    body {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+
 }

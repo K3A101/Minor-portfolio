@@ -40,12 +40,17 @@
     --typografie-bg-kleur2: #ecdfce;
     --typografie-bg-kleur3: #a97c50;
     --typografie-bg-kleur4: #efd4b5;
+
+    /* Algemene stilen */
+    --header-van-portfolio: 'pedestria-mvb',
+        sans-serif;
+    --bodytekst-van-portfolio: 'interstate', sans-serif;
 }
 
 
 body {
     background-color: rgb(255, 255, 255);
-    background-image: url(../images/illustrations/bulletpoint-bg.svg);
+
     background-repeat: repeat;
     display: grid;
     place-items: center;
@@ -62,8 +67,8 @@ header {
 }
 
 h1 {
-    font-family: 'pedestria-mvb', sans-serif;
-    ;
+    font-family: var(--header-van-portfolio);
+
     font-weight: 700;
     font-size: 3em;
     text-align: center;
@@ -76,19 +81,7 @@ header ul {
     gap: 2em;
 }
 
-.inleiding {
-    display: grid;
-    place-content: center;
-    width: 100%;
-    height: 800px;
-    background-image: url(../images/illustrations/hompage-intro.svg);
-    background-repeat: no-repeat;
-    background-position-y: 5em;
-}
 
-.inleiding h1 {
-    font-size: 5em;
-}
 
 main {
 
@@ -98,14 +91,13 @@ main {
 }
 
 section {
-    display: grid;
+
     background-color: white;
     width: 100%;
 }
 
 img {
-    max-width: 70%;
-    width: 40%;
+    max-width: 85vw;
     border-radius: 1em;
 }
 
@@ -119,6 +111,7 @@ a {
 
 p {
     line-height: 1.5em;
+    font-family: var(--bodytekst-van-portfolio);
 }
 
 
@@ -129,8 +122,13 @@ p {
 /* Grid en kleur */
 section:first-of-type {
     background-color: var(--grid-en-kleur-achtergrond);
-    background-image: url(../images/lantern-pattern.svg);
-    position: relative;
+    display: grid;
+    gap: 2em;
+
+}
+
+section:first-of-type article>img {
+    width: 80vw;
 }
 
 
@@ -141,15 +139,18 @@ section:first-of-type h1 {
 }
 
 
-section:first-of-type>article {
+section:first-of-type article {
     margin: 1em;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 2em;
 
 }
 
 section:first-of-type h2,
-h3 {
+section:first-of-type h3 {
     color: var(--grid-en-kleur-tekst-kleur);
     font-family: var(--grid-en-kleur-tekst);
     font-weight: 700;
@@ -160,16 +161,11 @@ section:first-of-type h2 {
 }
 
 section:first-of-type p {
-    font-family: var(--grid-en-kleur-bodytekst);
     line-height: 1.9;
     padding: .5em;
 }
 
-section:first-of-type .grid-en-kleur-info {
-    background-color: white;
-    padding: 2em;
-    border-radius: 1em;
-}
+
 
 section:first-of-type figure {
 
@@ -177,11 +173,11 @@ section:first-of-type figure {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    gap: 2em;
+    gap: 1em;
 }
 
 section:first-of-type figure img {
-    width: 30%;
+    width: 27%;
 }
 
 
@@ -190,137 +186,190 @@ section:first-of-type figure img {
 /*************/
 /* Typografie */
 section:nth-of-type(2) {
-    display: grid;
-    gap: 3em;
-    position: relative;
     background-color: var(--typografie-bg-kleur2);
+
+
 }
 
-section:nth-of-type(2)>h2 {
-    position: absolute;
-    right: 1em;
-    color: var(--typografie-bg-kleur3);
-    top: 3em;
+section:nth-of-type(2) .typografie-container {
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+
+    margin: 0 5%;
+}
+
+section:nth-of-type(2) article:nth-of-type(1) img {
+    width: 50vw;
+}
+
+section:nth-of-type(2) article:nth-of-type(2) img {
+    width: 23vw;
+}
+
+section:nth-of-type(2) h3 {
     font-family: 'binner-ef';
-    font-size: 7em;
+    writing-mode: vertical-lr;
+    font-size: 5em;
+    color: var(--typografie-bg-kleur1);
+
+}
+
+section:nth-of-type(2) h2 {
+    padding: .5em 0;
+    font-family: 'interstate',
+        sans-serif;
+    font-weight: 700;
+
 }
 
 section:nth-of-type(2) h1 {
     background-color: var(--typografie-bg-kleur1);
     color: var(--typografie-bg-kleur4);
+    width: 100%;
 }
 
 section:nth-of-type(2) p {
-    font-family: "LTCJensonW00-Regular";
-}
-
-section:nth-of-type(2) article:nth-of-type(1) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
+    line-height: 1.9;
 
 }
 
-section:nth-of-type(2) article:nth-of-type(1) h2 {
-    font-size: 4.5em;
-    /* grid-column-start: 1;
-    grid-column-end: -1; */
-    position: absolute;
-    left: 2em;
-    writing-mode: vertical-rl;
-}
-
-section:nth-of-type(2) article:nth-of-type(1) img {
-    display: grid;
-    width: 80%;
-    place-self: end;
-}
-
-section:nth-of-type(2) article:nth-of-type(1) p {
-    place-self: center;
-    padding: 3em;
-}
-
-section:nth-of-type(2) article:nth-of-type(2) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-}
-
-section:nth-of-type(2) article:nth-of-type(2) h2 {
-    font-family: 'binner-ef';
-    font-size: 2em;
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-section:nth-of-type(2) article:nth-of-type(2) img {
-    display: grid;
-    width: 80%;
-
-}
-
-section:nth-of-type(2) article:nth-of-type(2) p {
-
-    padding: 3em;
-}
-
-section:nth-of-type(2) article:nth-of-type(3) {
-    display: grid;
-    /* grid-template-columns: 1fr 1fr; */
-
-}
-
-section:nth-of-type(2) article:nth-of-type(3) img {
-
-    place-self: center;
-    width: 80%;
-
-}
 
 /*************/
 /* SECTION 3 */
 /*************/
+/* Webtypografie */
 section:nth-of-type(3) {
     display: grid;
     place-items: center;
+
 }
 
-section:nth-of-type(3) video {}
+section:nth-of-type(3) video {
+    margin: 2em;
+
+}
+
+section:nth-of-type(3) p {
+    padding: 2em;
+    ;
+    margin: 0 auto;
+    width: 50%;
+}
+
+section:nth-of-type(3) p::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+}
 
 /*************/
 /* SECTION 4 */
 /*************/
+/* Beeldtaal */
 section:nth-of-type(4) {
     background-color: rgb(34, 34, 34);
+    background: url(../images/beeldtaal-poster.png);
+    background-size: contain;
+
 }
 
 section:nth-of-type(4) h1 {
     color: rgb(255, 255, 255);
+    background-color: rgb(34 34 34);
 }
 
 section:nth-of-type(4) h2 {
+    display: grid;
+    place-items: center;
+
     color: rgb(255, 255, 255);
+    font-family: var(--bodytekst-van-portfolio);
+    font-weight: bold;
+
 }
 
-section:nth-of-type(4) article:nth-of-type(1) figure {
-    display: flex;
-    justify-content: center;
+section:nth-of-type(4) article {
+    padding: 2em;
+    display: grid;
+    place-content: center;
+    background-color: rgb(34 34 34 / .7);
+    gap: 2em;
+}
+
+
+section:nth-of-type(4) article img {
+    width: 50%;
+    place-self: center;
+}
+
+section:nth-of-type(4) article p {
+    width: 50%;
+    margin: 0 auto;
+    color: white;
+    padding: 2em;
+}
+
+/*************/
+/* SECTIION 5 */
+/*************/
+/* Interface en beweging */
+
+section:nth-of-type(5) {
+    position: relative;
+    background-color:#a0daf4;
+    display: grid;
+    place-items: center;
+    padding: 2em;
+}
+
+section:nth-of-type(5) article {
+
+    display: grid;
+    place-items: center;
     gap: 2em;
 
 }
 
-section:nth-of-type(4) article:nth-of-type(1) figure img {
-    width: 30%;
+section:nth-of-type(5) h2 {
+    font-family: var(--bodytekst-van-portfolio);
+    font-weight: bold;
+}
+
+section:nth-of-type(5) p {
+    margin: 0 auto;
+    width: 50%;
+}
+
+section:nth-of-type(5) a {
+    font-family: var(--bodytekst-van-portfolio);
+    background-color: white;
+    color: black;
+    padding: .8em;
+    border-radius: 1em;
 }
 
 
 
+section:nth-of-type(5) img.switch {
+    content: url(../images/light-version-mario.png);
+
+}
+
+section:nth-of-type(5) button {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    background-color: white;
+    border: none;
+    padding: 1em;
+}
+
+
 @media (min-width:100em) {
-    body {
+    /* body {
         margin: 0 auto;
         width: 80%;
-    }
+    } */
 
 
 }

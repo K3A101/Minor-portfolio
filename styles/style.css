@@ -316,7 +316,7 @@ section:nth-of-type(4) article p {
 
 section:nth-of-type(5) {
     position: relative;
-    background-color:#a0daf4;
+    background-color: #a0daf4;
     display: grid;
     place-items: center;
     padding: 2em;
@@ -335,7 +335,7 @@ section:nth-of-type(5) h2 {
     font-weight: bold;
 }
 
-section:nth-of-type(5) p {
+section:nth-of-type(5) article p {
     margin: 0 auto;
     width: 50%;
 }
@@ -362,6 +362,76 @@ section:nth-of-type(5) button {
     background-color: white;
     border: none;
     padding: 1em;
+}
+
+.speech-bubble {
+    position: absolute;
+    top: 22em;
+    right: 25em;
+    text-align: center;
+    background-color: white;
+    padding: 2em;
+    width: 250px;
+    height: 100px;
+    border-radius: 1em;
+}
+
+.speech-bubble::before {
+    content: "";
+    position: absolute;
+    bottom: -1em;
+    border-left: 24px solid #fff;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #fff;
+    border-bottom: 20px solid transparent;
+    text-align: right;
+    height: 0px;
+    width: 0px;
+
+
+}
+
+/*************/
+/* SECTION 6 */
+/*************/
+section:nth-of-type(6) {
+    position: relative;
+    background-image: url(../images/zee-achtergrond.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+
+section:nth-of-type(6) article {
+    display: grid;
+    place-items: center;
+    gap: 1em;
+}
+
+section:nth-of-type(6) h2 {
+    font-family: var(--bodytekst-van-portfolio);
+    font-weight: 700;
+}
+
+
+section:nth-of-type(6) img {
+    width: 15%; 
+    position: absolute;
+    left: 1em;
+}
+
+section:nth-of-type(6) p {
+    margin: 0 auto;
+    width: 50%;
+}
+
+section:nth-of-type(6) a {
+    font-family: var(--bodytekst-van-portfolio);
+    background-color: white;
+    color: black;
+    padding: .8em;
+    border-radius: 1em;
 }
 
 

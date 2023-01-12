@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'binner-ef';
+    src: url('../fonts/binneref-webfont.woff2') format('woff2'),
+        url('../fonts/binneref-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ltc_jenson_w00regular';
+    src: url('ltc-jenson-w00-webfont.woff2') format('woff2'),
+        url('ltc-jenson-w00-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --donker-paars: #662d91;
+    --licht-paars: #bba8ff;
+
+    /* Grid en kleur huisstijl */
+    --grid-en-kleur-achtergrond: #fffaf6;
+    --grid-en-kleur-tekst-kleur: #b84b4b;
+    --grid-en-kleur-button-kleur: #544389;
+    --grid-en-kleur-accent-kleur: #f5922c;
+    --grid-en-kleur-tekst: 'pt-serif-pro',
+        sans-serif;
+    --grid-en-kleur-bodytekst: 'articulat-cf', sans-serif;
+
+    /* Typografie */
+    --typografie-bg-kleur1: #705435;
+    --typografie-bg-kleur2: #ecdfce;
+    --typografie-bg-kleur3: #a97c50;
+    --typografie-bg-kleur4: #efd4b5;
+
+    /* Algemene stilen */
+    --header-van-portfolio: 'pedestria-mvb',
+        sans-serif;
+    --bodytekst-van-portfolio: 'interstate', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--bodytekst-van-portfolio);
+}
+
+p {
+    line-height: 1.5em;
+    font-family: var(--bodytekst-van-portfolio);
+}
+
+
+@media (min-width:100em) {
+    /* body {
+        margin: 0 auto;
+        width: 80%;
+    } */
+
+
+}

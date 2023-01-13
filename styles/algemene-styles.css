@@ -54,6 +54,11 @@ li {
 a {
     text-decoration: none;
     font-family: var(--bodytekst-van-portfolio);
+}  
+
+a:hover {
+ cursor: pointer;
+ 
 }
 
 p {

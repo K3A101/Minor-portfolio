@@ -1,4 +1,3 @@
-
 body {
     background-color: rgb(255, 255, 255);
 
@@ -15,8 +14,8 @@ header {
     right: 0;
 
     padding: .3em;
-    
-  
+
+
     padding: 2em;
 }
 
@@ -50,6 +49,14 @@ section {
     width: 100%;
 }
 
+section a {
+    font-family: var(--bodytekst-van-portfolio);
+    background-color: white;
+    color: black;
+    padding: .8em;
+    border-radius: .2em;
+}
+
 img {
     max-width: 85vw;
     border-radius: 1em;
@@ -68,6 +75,31 @@ img {
 
 .inleiding h1 {
     font-size: 5em;
+}
+
+.inleiding .arrow {
+    width: 2vw;
+    position: absolute;
+    bottom: 1em;
+    animation: moving-upside-down ease-in-out 1s infinite;
+    /* animation-delay: 2s; */
+}
+
+@keyframes moving-upside-down {
+    0% {
+        transform: translateY(0);
+        
+    }
+    50% {
+        transform: translateY(-2em);
+      
+    }
+
+    100% {
+        transform: translateY(0);
+
+        /* transform: rotate(45deg); */
+    }
 }
 
 /********/
@@ -135,6 +167,15 @@ section:first-of-type figure img {
     width: 27%;
 }
 
+section:first-of-type a {
+    background-color: var(--grid-en-kleur-button-kleur);
+    color: white;
+}
+
+section:first-of-type a:hover {
+    background-color: var(--grid-en-kleur-accent-kleur);
+    color: white;
+}
 
 /*************/
 /* SECTION 2 */
@@ -142,7 +183,7 @@ section:first-of-type figure img {
 /* Typografie */
 section:nth-of-type(2) {
     background-color: var(--typografie-bg-kleur2);
-
+    display: grid;
 
 }
 
@@ -189,6 +230,17 @@ section:nth-of-type(2) p {
 
 }
 
+section:nth-of-type(2) a {
+    place-self: center;
+    margin: 4em;
+    background-color: var(--typografie-bg-kleur1);
+    color: white;
+}
+
+section:nth-of-type(2) a:hover {
+    background-color: var(--typografie-bg-kleur4);
+    color: var(--typografie-bg-kleur1);
+}
 
 /*************/
 /* SECTION 3 */
@@ -215,6 +267,18 @@ section:nth-of-type(3) p {
 section:nth-of-type(3) p::first-letter {
     font-size: 2em;
     font-weight: bold;
+}
+
+section:nth-of-type(3) a {
+    margin: 2em;
+    background-color: #153785;
+    color: white;
+}
+
+section:nth-of-type(3) a:hover {
+    margin: 2em;
+    background-color: #6185d8;
+    color: white;
 }
 
 /*************/
@@ -251,6 +315,16 @@ section:nth-of-type(4) article {
     gap: 2em;
 }
 
+section:nth-of-type(4) article a {
+    place-self: center;
+
+}
+
+section:nth-of-type(4) article a:hover {
+    background-color: rgb(42, 42, 42);
+    color: white;
+
+}
 
 section:nth-of-type(4) article img {
     width: 50%;
@@ -267,7 +341,7 @@ section:nth-of-type(4) article p {
 /*************/
 /* SECTIION 5 */
 /*************/
-/* Interface en beweging */
+/* Interface en interactie */
 
 section:nth-of-type(5) {
     position: relative;
@@ -295,14 +369,22 @@ section:nth-of-type(5) article p {
     width: 50%;
 }
 
-section:nth-of-type(5) a {
-    font-family: var(--bodytekst-van-portfolio);
-    background-color: white;
-    color: black;
-    padding: .8em;
-    border-radius: 1em;
+section:nth-of-type(5) nav ul {
+    padding: 4em;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
 }
 
+section:nth-of-type(5) nav ul a {
+    box-shadow: .3em .3em #E62310;
+    transition: ease-in-out .2s;
+}
+
+section:nth-of-type(5) nav ul a:hover {
+    box-shadow: .2em .2em #009bd9;
+    color: #009bd9;
+}
 
 
 section:nth-of-type(5) img.switch {
@@ -349,6 +431,7 @@ section:nth-of-type(5) button {
 /*************/
 /* SECTION 6 */
 /*************/
+/* Interface en beweging */
 section:nth-of-type(6) {
     position: relative;
     background-image: url(../images/zee-achtergrond.svg);
@@ -371,7 +454,7 @@ section:nth-of-type(6) h2 {
 
 
 section:nth-of-type(6) img {
-    width: 15%; 
+    width: 15%;
     position: absolute;
     left: 1em;
 }
@@ -381,12 +464,9 @@ section:nth-of-type(6) p {
     width: 50%;
 }
 
-section:nth-of-type(6) a {
-    font-family: var(--bodytekst-van-portfolio);
-    background-color: white;
-    color: black;
-    padding: .8em;
-    border-radius: 1em;
+section:nth-of-type(6) nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 4em;
 }
-
-

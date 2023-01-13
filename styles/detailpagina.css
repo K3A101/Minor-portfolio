@@ -4,20 +4,29 @@
 
 
 body {
-   background: url(../images/bulletpoint.svg);
-   
+    background: url(../images/bulletpoint.svg);
+
 }
 
-h1 ,h2 {
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h1,
+h2 {
     font-family: var(--header-van-portfolio);
 }
 
 main {
     display: grid;
-   place-items: center;
-   width: 100%;
-   gap: 3em;
-   
+    place-items: center;
+    width: 100%;
+    gap: 10em;
+
 }
 
 section {
@@ -28,34 +37,57 @@ img {
     width: 30vw;
 }
 
+header {
+    padding: 2em;
+}
+
+
+
 
 /*************/
 /* SECTION 1 */
 /*************/
+/* Vak en de naam van de opdracht */
 section:nth-of-type(1) {
-grid-template-columns: repeat(2 ,1fr);
-align-items: center;
-height: 80vh;
-width: 100%;
-background-color: aqua;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    background-color: aqua;
 }
 
 section:nth-of-type(1) article {
     place-self: center;
 }
 
-
+/* De opdracht onderdeel */
 section:nth-of-type(2) {
     grid-template-columns: 2fr 1fr;
     padding: 4em;
     margin: 0 auto;
-  height: 80vh;
-  
+    height: 80vh;
+    gap: 3em;
     width: 80%;
- 
+
 }
 
-section:nth-of-type(2) article{
+section:nth-of-type(2) article {
     place-self: top;
-  
+
+}
+
+section:nth-of-type(3)  ul {
+display: grid;
+gap: 2em;
+}
+
+/* Stijling van per Vak pagina */
+#grid-en-kleur-huisstijl {
+    background-color: var(--grid-en-kleur-tekst-kleur);
+    color: var(--grid-en-kleur-achtergrond);
+}
+
+#typografie-huisstijl {
+    background-color: var(--typografie-bg-kleur1);
+    color: var(--typografie-bg-kleur4);
 }

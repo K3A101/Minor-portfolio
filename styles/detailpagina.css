@@ -75,10 +75,23 @@ section:nth-of-type(2) article {
     place-self: top;
 
 }
+section:nth-of-type(3) {
+    margin-bottom: 2em;
+}
 
 section:nth-of-type(3)  ul {
 display: grid;
 gap: 2em;
+place-items: center;
+}
+
+section:nth-of-type(3) ul a {
+    font-family: var(--bodytekst-van-portfolio);
+    margin: 1em;
+    background-color: #153785;
+    color: white;
+    padding: .8em;
+    border-radius: .2em;
 }
 
 /* Stijling van per Vak pagina */
@@ -90,4 +103,9 @@ gap: 2em;
 #typografie-huisstijl {
     background-color: var(--typografie-bg-kleur1);
     color: var(--typografie-bg-kleur4);
+}
+
+#webtypografie-huisstijl {
+    background-color: #153785;
+    color: white;
 }

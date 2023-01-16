@@ -44,6 +44,8 @@ header {
 
 
 
+
+
 /*************/
 /* SECTION 1 */
 /*************/
@@ -62,6 +64,7 @@ section:nth-of-type(1) article {
 
 /* De opdracht onderdeel */
 section:nth-of-type(2) {
+    background-color: white;
     grid-template-columns: 2fr 1fr;
     padding: 4em;
     margin: 0 auto;
@@ -69,6 +72,17 @@ section:nth-of-type(2) {
     gap: 3em;
     width: 80%;
 
+}
+
+
+section:nth-of-type(2) p {
+    
+    line-height: 1.7;
+}
+
+section:nth-of-type(2) p span {
+    display: block;
+    margin: .8em 0;
 }
 
 section:nth-of-type(2) article {
@@ -108,4 +122,9 @@ section:nth-of-type(3) ul a {
 #webtypografie-huisstijl {
     background-color: #153785;
     color: white;
+}
+
+#beeldtaal-huisstijl {
+  background-color: rgb(34, 34, 34);
+  color: white;
 }

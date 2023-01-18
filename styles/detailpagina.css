@@ -99,7 +99,9 @@ gap: 2em;
 place-items: center;
 }
 
+
 section:nth-of-type(3) ul a {
+    position: static;
     font-family: var(--bodytekst-van-portfolio);
     margin: 1em;
     background-color: #153785;
@@ -127,4 +129,18 @@ section:nth-of-type(3) ul a {
 #beeldtaal-huisstijl {
   background-color: rgb(34, 34, 34);
   color: white;
+}
+
+#interface-en-interactie-huisstijl {
+    background-color: #a0daf4;
+    color: black;
+}
+
+img[src="./images/mario-tijdlijn.png"] {
+    width: 35vw;
+}
+
+#interface-en-beweging-huisstijl {
+color: black;
+background-color: #a6f2f7;
 }

@@ -28,7 +28,7 @@ header ul {
 
 header a {
     position: relative;
-    font-size: 1.2em;
+    font-size: 1em;
     padding: .5em 0;
     color: rgb(37, 37, 37);
     cursor: pointer;

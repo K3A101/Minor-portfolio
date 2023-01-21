@@ -41,6 +41,11 @@
     --typografie-bg-kleur3: #a97c50;
     --typografie-bg-kleur4: #efd4b5;
 
+
+    /* Meesterproef */
+    --meesterproef-bg: #c5c9ff;
+    --meesterproef-licht-paars: #faf3ff;
+    --meesterproef-button: #29ffff;
     /* Algemene stilen */
     --header-van-portfolio: 'pedestria-mvb',
         sans-serif;

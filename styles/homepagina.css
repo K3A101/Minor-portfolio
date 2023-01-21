@@ -27,12 +27,18 @@ header ul {
 }
 
 header a {
+    position: relative;
     font-size: 1.2em;
     padding: .5em 0;
-    color: black;
+    color: rgb(37, 37, 37);
     cursor: pointer;
-
+    transition: all .5s;
 }
+
+header a:hover {
+    color: rgb(123, 123, 123);
+}
+
 
 
 h1 {
@@ -118,26 +124,26 @@ img {
 /********/
 
 /* Grid en kleur */
-section:first-of-type {
+section:nth-of-type(1) {
     background-color: var(--grid-en-kleur-achtergrond);
     display: grid;
     gap: 2em;
 
 }
 
-section:first-of-type article>img {
+section:nth-of-type(1) article>img {
     width: 80vw;
 }
 
 
-section:first-of-type h1 {
+section:nth-of-type(1) h1 {
 
     background-color: var(--grid-en-kleur-tekst-kleur);
     color: white;
 }
 
 
-section:first-of-type article {
+section:nth-of-type(1) article {
     margin: 1em;
     display: flex;
     flex-direction: column;
@@ -147,25 +153,25 @@ section:first-of-type article {
 
 }
 
-section:first-of-type h2,
-section:first-of-type h3 {
+section:nth-of-type(1) h2,
+section:nth-of-type(1) h3 {
     color: var(--grid-en-kleur-tekst-kleur);
     font-family: var(--grid-en-kleur-tekst);
     font-weight: 700;
 }
 
-section:first-of-type h2 {
+section:nth-of-type(1) h2 {
     font-size: 4em;
 }
 
-section:first-of-type p {
+section:nth-of-type(1) p {
     line-height: 1.9;
     padding: .5em;
 }
 
 
 
-section:first-of-type figure {
+section:nth-of-type(1) figure {
 
     display: flex;
     flex-direction: row;
@@ -174,16 +180,16 @@ section:first-of-type figure {
     gap: 1em;
 }
 
-section:first-of-type figure img {
+section:nth-of-type(1) figure img {
     width: 27%;
 }
 
-section:first-of-type a {
+section:nth-of-type(1) a {
     background-color: var(--grid-en-kleur-button-kleur);
     color: white;
 }
 
-section:first-of-type a:hover {
+section:nth-of-type(1) a:hover {
     background-color: var(--grid-en-kleur-accent-kleur);
     color: white;
 }
@@ -275,7 +281,7 @@ section:nth-of-type(3) p {
     width: 50%;
 }
 
-section:nth-of-type(3) p::first-letter {
+section:nth-of-type(3) p::nth-letter {
     font-size: 2em;
     font-weight: bold;
 }
@@ -481,3 +487,51 @@ section:nth-of-type(6) nav ul {
     gap: 1em;
     padding: 4em;
 }
+
+/*************/
+/* SECTION 7 */
+/*************/
+/* Meesterproef */
+
+section:nth-of-type(7) {
+    background-color: var(--meesterproef-licht-paars);
+    display: grid;
+    place-items: center;
+
+}
+
+section:nth-of-type(7) h1 {
+    width: 100%;
+    background-color: #662d91;
+    color: white;
+}
+
+section:nth-of-type(7) article {
+    display: grid;
+    place-items: center;
+    gap: 1em;
+}
+
+section:nth-of-type(7) article p {
+    margin: 0 auto;
+    width: 50%;
+
+}
+
+section:nth-of-type(7) nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 4em;
+}
+
+section:nth-of-type(7) ul a {
+    background-color: #662d91;
+    color: white;
+    transition: all .3s;
+}
+
+section:nth-of-type(7) ul a:hover {
+    background-color: #9959ca;
+}
+

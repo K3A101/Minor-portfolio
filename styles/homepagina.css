@@ -497,7 +497,7 @@ section:nth-of-type(7) {
     background-color: var(--meesterproef-licht-paars);
     display: grid;
     place-items: center;
-
+    gap: 2em;
 }
 
 section:nth-of-type(7) h1 {
@@ -534,4 +534,3 @@ section:nth-of-type(7) ul a {
 section:nth-of-type(7) ul a:hover {
     background-color: #9959ca;
 }
-

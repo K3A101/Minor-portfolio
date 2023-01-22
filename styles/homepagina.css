@@ -487,6 +487,14 @@ section:nth-of-type(6) nav ul {
     gap: 1em;
     padding: 4em;
 }
+section:nth-of-type(6) ul a {
+    background-color: white;
+    
+}
+
+section:nth-of-type(6) ul a:hover {
+    background-color: #a0daf4;
+}
 
 /*************/
 /* SECTION 7 */

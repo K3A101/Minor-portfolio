@@ -63,6 +63,7 @@ a {
 
 a:hover {
  cursor: pointer;
+ transition: all .3s;
  
 }
 

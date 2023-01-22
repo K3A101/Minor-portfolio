@@ -86,10 +86,13 @@ section:nth-of-type(2) p span {
 }
 
 section:nth-of-type(2) article {
+   display: grid;
     place-self: top;
 
 }
 section:nth-of-type(3) {
+    display: grid;
+    gap: 2em;
     margin-bottom: 2em;
 }
 
@@ -109,6 +112,7 @@ section:nth-of-type(3) ul a {
     padding: .8em;
     border-radius: .2em;
 }
+
 
 /* Stijling van per Vak pagina */
 #grid-en-kleur-huisstijl {

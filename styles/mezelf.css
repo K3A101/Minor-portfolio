@@ -30,7 +30,6 @@ header a:hover {
     color: rgb(123, 123, 123);
 }
 
-
 main {
     display: grid;
     place-items: center;
@@ -46,6 +45,7 @@ section {
     margin: 0 auto;
     width: 80%;
 }
+
 article {
     display: grid;
 }
@@ -59,4 +59,3 @@ section h1 {
     font-family: var(--header-van-portfolio);
     font-size: 5vw;
 }
-
